@@ -51,19 +51,24 @@ int sort()
 	float stop;
 	float cycle;
 
-	printf("1.SORT THE PLANTS ASCENDING\n");
-	printf("2.SORT THE PLANTS DESCENDING\n");
-	printf("3.SORT THE MACHINES ASCENDING\n");
-	printf("4.SORT THE MACHINES DECENDING\n");
+	printf("\n=========================================\n");
+	printf("| 1. | SORT THE PLANTS ASCENDING	|\n");
+	printf("|----|----------------------------------|\n");
+	printf("| 2. | SORT THE PLANTS DESCENDING	|\n");
+	printf("|----|----------------------------------|\n");
+	printf("| 3. | SORT THE MACHINES ASCENDING	|\n");
+	printf("|----|----------------------------------|\n");
+	printf("| 4. | SORT THE MACHINES DECENDING	|\n");
+	printf("=========================================\n");
 
-	printf("CHOOSE ONE FROM THE ABOVE : ");
+	printf("\nCHOOSE ONE FROM THE ABOVE : ");
 	choice = intvalidation();
 
 	if(choice == 1)
 	{
 		if(p_start == NULL)
 		{
-			printf("MACHINE LIST IS EMPTY\n");
+			printf("\n-----***** PLANT LIST IS EMPTY *****-----\n");
 			return 0;
 		}
 
@@ -93,7 +98,7 @@ int sort()
 	{
 		if(p_start == NULL)
 		{
-			printf("MACHINE LIST IS EMPTY\n");
+			printf("\n-----***** PLANT LIST IS EMPTY *****-----\n");
 			return 0;
 		}
 
@@ -125,7 +130,7 @@ int sort()
 
 		if(p_start == NULL)
 		{	
-			printf("MACHINE LIST IS EMPTY\n");
+			printf("\n-----***** MACHINE LIST IS EMPTY *****-----\n");
 			return 0;
 		}
 
@@ -175,7 +180,7 @@ int sort()
 
 		if(p_start == NULL)
 		{
-			printf("MACHINE LIST IS EMPTY\n");
+			printf("\n-----***** MACHINE LIST IS EMPTY *****-----\n");
 			return 0;
 		}
 
@@ -221,7 +226,7 @@ int sort()
 	}
 	else
 	{
-		printf("\nWRONG CHOICE\n");
+		printf("\n-----***** WRONG CHOICE *****-----\n");
 	}
 
 	return 0;

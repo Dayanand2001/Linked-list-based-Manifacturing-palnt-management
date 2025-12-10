@@ -40,7 +40,7 @@ int deletre_plant()
 
 	if(p_start == NULL)
 	{
-		printf("NO PLANT IS ADDED! WANT TO ADD PLANT Y/N : ");
+		printf("\nNO PLANT IS ADDED! WANT TO ADD PLANT Y/N : ");
 		choice = charvalidation();
 		if(choice == 'Y' || choice == 'y')
 		{
@@ -50,7 +50,7 @@ int deletre_plant()
 		return 0;
 	}
 
-	printf("ENTER THE NAME OF PLANT TO DELET : ");
+	printf("\nENTER THE NAME OF PLANT TO DELET : ");
 	name = charvalidation();
 
 	printf("ENTER THE LOCATION OF PLANT : ");
@@ -63,7 +63,7 @@ int deletre_plant()
 		p_start = p_start -> p_link;
 		free(temp);
 
-		printf("PLANT DELETED SUCCESSFULLY.\n");
+		printf("\n-----***** PLANT DELETED SUCCESSFULLY *****-----\n");
 
 		return 0;
 	}
@@ -78,7 +78,7 @@ int deletre_plant()
 			q -> p_link = temp -> p_link;
 			free(temp);
 
-			printf("PLANT DELETED SUCCESSFULLY.\n");
+			printf("-----***** PLANT DELETED SUCCESSFULLY *****-----\n");
 			return 0;
 		}
 		q = q -> p_link;

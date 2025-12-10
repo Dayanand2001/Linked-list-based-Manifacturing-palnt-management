@@ -61,12 +61,10 @@ int display()
 		printf("PLANT NAME 		: %c\n",q -> plant_name);
 		printf("PLANT LOCATIOn		: %s\n",q -> location);
 		printf("PLANT PRODUCTION	: %d\n",q -> plant_prod_count);
-		//printf("NEXT NODE		: %p\n",q -> p_link);
-		//printf("machine		: %p\n",q -> m_link);
 
 		if(q -> m_link == NULL)
 		{
-			printf("NO MACHINES ARE ADDED! WANT TO ADD Y/N : ");
+			printf("\nNO MACHINES ARE ADDED! WANT TO ADD Y/N : ");
 			choice = charvalidation();
 
 			if(choice == 'Y' || choice == 'y')
@@ -80,13 +78,13 @@ int display()
 
 		while(a != NULL)
 		{
-			printf("\n=============== MACHINE ==================\n");
-			printf("MACHINE ID 		: %d\n",a -> machine_id);
-			printf("MACHINE NAME 		: %s\n",a -> name);
-			printf("MACHINE START		: %.2f\n",a -> start);
-			printf("MACHINE STOP		: %.2f\n",a -> stop);
-			printf("MACHINE CYCLE TIME(min)	: %.2f\n",a -> cycle);
-			printf("MACHINE PRODUCTION	: %d\n",a -> prod_count);
+			printf("\n	=============== MACHINE ==================\n");
+			printf("	MACHINE ID 		: %d\n",a -> machine_id);
+			printf("	MACHINE NAME 		: %s\n",a -> name);
+			printf("	MACHINE START		: %.2f\n",a -> start);
+			printf("	MACHINE STOP		: %.2f\n",a -> stop);
+			printf("	MACHINE CYCLE TIME(min)	: %.2f\n",a -> cycle);
+			printf("	MACHINE PRODUCTION	: %d\n",a -> prod_count);
 			a = a -> link;
 		}
 		q = q -> p_link;

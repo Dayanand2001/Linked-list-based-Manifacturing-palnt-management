@@ -41,8 +41,11 @@ int search()
 	int p_found = 0;
 	int m_found = 0;
 
-	printf("1.SEARCH BY PLANT NAME\n");
-	printf("2.SEARCH BY MACHINE ID\n");
+	printf("\n=================================\n");
+	printf("| 1. | SEARCH BY PLANT NAME	|\n");
+	printf("|----|--------------------------|\n");
+	printf("| 2. | SEARCH BY MACHINE ID	|\n");
+	printf("=================================\n");
 
 	printf("\nCHOOSE ONE FROM THE ABOVE : ");
 	choice = intvalidation();
@@ -68,13 +71,13 @@ int search()
 
 				while(m != NULL)
 				{
-					printf("\n=============== MACHINE ==================\n");
-					printf("MACHINE ID              : %d\n",m -> machine_id);
-					printf("MACHINE NAME            : %s\n",m -> name);
-					printf("MACHINE START           : %.2f\n",m -> start);
-					printf("MACHINE STOP            : %.2f\n",m -> stop);
-					printf("MACHINE CYCLE TIME(min) : %.2f\n",m -> cycle);
-					printf("MACHINE PRODUCTION      : %d\n",m -> prod_count);
+					printf("\n	=============== MACHINE ==================\n");
+					printf("	MACHINE ID              : %d\n",m -> machine_id);
+					printf("	MACHINE NAME            : %s\n",m -> name);
+					printf("	MACHINE START           : %.2f\n",m -> start);
+					printf("	MACHINE STOP            : %.2f\n",m -> stop);
+					printf("	MACHINE CYCLE TIME(min) : %.2f\n",m -> cycle);
+					printf("	MACHINE PRODUCTION      : %d\n",m -> prod_count);
 					m = m -> link;
 				}
 				return 0;
@@ -83,7 +86,7 @@ int search()
 		}
 		if(p_found != 1)
 		{
-			printf("\nPLANT DOES NOT EXISTS\n");
+			printf("\n-----***** PLANT DOES NOT EXISTS *****-----\n");
 			return 0;
 		}
 	}
@@ -113,13 +116,13 @@ int search()
 						printf("PLANT LOCATIOn          : %s\n",p -> location);
 						printf("PLANT PRODUCTION        : %d\n",p -> plant_prod_count);
 
-						printf("\n=============== MACHINE ==================\n");
-						printf("MACHINE ID              : %d\n",m -> machine_id);
-						printf("MACHINE NAME            : %s\n",m -> name);
-						printf("MACHINE START           : %.2f\n",m -> start);
-						printf("MACHINE STOP            : %.2f\n",m -> stop);
-						printf("MACHINE CYCLE TIME(min) : %.2f\n",m -> cycle);
-						printf("MACHINE PRODUCTION      : %d\n",m -> prod_count);
+						printf("\n	=============== MACHINE ==================\n");
+						printf("	MACHINE ID              : %d\n",m -> machine_id);
+						printf("	MACHINE NAME            : %s\n",m -> name);
+						printf("	MACHINE START           : %.2f\n",m -> start);
+						printf("	MACHINE STOP            : %.2f\n",m -> stop);
+						printf("	MACHINE CYCLE TIME(min) : %.2f\n",m -> cycle);
+						printf("	MACHINE PRODUCTION      : %d\n",m -> prod_count);
 						return 0;
 					}
 					m = m -> link;
@@ -129,18 +132,18 @@ int search()
 		}
 		if(p_found != 1)
 		{
-			printf("\nPLANT DOES NOT EXISTS\n");
+			printf("\n-----***** PLANT DOES NOT EXISTS *****-----\n");
 			return 0;
 		}
 		if(m_found != 1)
 		{
-			printf("\nMACHINE DOES NOT EXISTS\n");
+			printf("\n-----***** MACHINE DOES NOT EXISTS *****-----\n");
 			return 0;
 		}
 	}
 	else
 	{
-		printf("\nWRONG CHOICE\n");
+		printf("\n-----***** WRONG CHOICE *****-----\n");
 	}
 	return 0;
 }

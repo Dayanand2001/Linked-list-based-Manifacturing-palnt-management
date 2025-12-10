@@ -69,6 +69,7 @@ int add_plant()
 	if(p_start == NULL)
 	{
 		p_start = temp;
+		printf("\n-----***** PLANT ADDED SUCCESSFULLY *****-----\n");
 		add_machine(name);
 	}
 	else
@@ -77,6 +78,8 @@ int add_plant()
 		while(q -> p_link != NULL)
 			q = q -> p_link;
 		q -> p_link = temp;
+		printf("\n-----***** PLANT ADDED SUCCESSFULLY *****-----\n");
+
 		add_machine(name);
 	}
 	return 0;

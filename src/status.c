@@ -48,9 +48,13 @@ int status()
 	int p_found = 0;
 	int m_found = 0;
 
-	printf("1.VIEW STATUS OF ALL PLANT\n");
-	printf("2.VIEW STATUS OF PERTICULAR PLANT\n");
-	printf("3.VIEW STATUS OF PERTICULAR MACHINE\n");
+	printf("\n=========================================\n");
+	printf("| 1. | VIEW STATUS OF ALL PLANT		|\n");
+	printf("|----|----------------------------------|\n");
+	printf("| 2. | VIEW STATUS OF PERTICULAR PLANT	|\n");
+	printf("|----|----------------------------------|\n");
+	printf("| 3. | VIEW STATUS OF PERTICULAR MACHINE|\n");
+	printf("=========================================\n");
 
 	printf("\nCHOOSE ONE FROM THE ABOVE : ");
 	choice = intvalidation();
@@ -68,7 +72,7 @@ int status()
 		q = p_start;
 
 		while(q != NULL)
-		{
+		{printf("|----|----------------------------------|\n");
 			if(q -> plant_name == name)
 			{
 				p_found = 1;
@@ -78,7 +82,7 @@ int status()
 		}
 		if(p_found != 1)
 		{
-			printf("\nPLANT DOES NOT EXISTS\n");
+			printf("\n-----***** PLANT DOES NOT EXISTS *****-----\n");
 			return 0;
 		}
 
@@ -88,11 +92,12 @@ int status()
 			if(q -> plant_name == name)
 			{
 				printf("\n================= PLANT %c ==================\n",q -> plant_name);
+				printf("PLANT NAME		: %c\n",q -> plant_name);
 				printf("LOCATION OF PLANT	: %s\n",q -> location);
 
 				if(q -> m_link == NULL)
 				{
-					printf("NO MACHINES ARE ADDED\n");
+					printf("\n-----***** NO MACHINES ARE ADDED *****-----\n");
 					return 0;
 				}
 
@@ -100,13 +105,13 @@ int status()
 
 				while(a != NULL)
 				{
-					printf("\n=============== MACHINE ==================\n");
-					printf("MACHINE ID              : %d\n",a -> machine_id);
-					printf("MACHINE NAME            : %s\n",a -> name);
-					printf("MACHINE START           : %.2f\n",a -> start);
-					printf("MACHINE STOP            : %.2f\n",a -> stop);
-					printf("MACHINE CYCLE TIME(min) : %.2f\n",a -> cycle);
-					printf("MACHINE PRODUCTION      : %d\n",a -> prod_count);
+					printf("\n	================== MACHINE ==================\n");
+					printf("	MACHINE ID              : %d\n",a -> machine_id);
+					printf("	MACHINE NAME            : %s\n",a -> name);
+					printf("	MACHINE START           : %.2f\n",a -> start);
+					printf("	MACHINE STOP            : %.2f\n",a -> stop);
+					printf("	MACHINE CYCLE TIME(min) : %.2f\n",a -> cycle);
+					printf("	MACHINE PRODUCTION      : %d\n",a -> prod_count);
 					a = a -> link;
 				}
 			}
@@ -131,7 +136,7 @@ int status()
 		}
 		if(p_found != 1)
 		{
-			printf("\nPLANT DOES NOT EXISTS\n");
+			printf("\n-----***** PLANT DOES NOT EXISTS *****-----\n");
 			return 0;
 		}
 
@@ -144,11 +149,12 @@ int status()
 			if(q -> plant_name == name)
 			{
 				printf("\n================= PLANT %c ==================\n",q -> plant_name);
+				printf("PLANT NAME              : %c\n",q -> plant_name);
 				printf("LOCATION OF PLANT       : %s\n",q -> location);
 
 				if(q -> m_link == NULL)
 				{
-					printf("NO MACHINES ARE ADDED\n");
+					printf("\n-----***** NO MACHINES ARE ADDED *****-----\n");
 					return 0;
 				}
 
@@ -158,20 +164,20 @@ int status()
 					if(a -> machine_id == id)
 					{
 						m_found = 1;
-						printf("\n=============== MACHINE ==================\n");
-						printf("MACHINE ID              : %d\n",a -> machine_id);
-						printf("MACHINE NAME            : %s\n",a -> name);
-						printf("MACHINE START           : %.2f\n",a -> start);
-						printf("MACHINE STOP            : %.2f\n",a -> stop);
-						printf("MACHINE CYCLE TIME(min) : %.2f\n",a -> cycle);
-						printf("MACHINE PRODUCTION      : %d\n",a -> prod_count);
+						printf("\n	==================== MACHINE ==================\n");
+						printf("	MACHINE ID              : %d\n",a -> machine_id);
+						printf("	MACHINE NAME            : %s\n",a -> name);
+						printf("	MACHINE START           : %.2f\n",a -> start);
+						printf("	MACHINE STOP            : %.2f\n",a -> stop);
+						printf("	MACHINE CYCLE TIME(min) : %.2f\n",a -> cycle);
+						printf("	MACHINE PRODUCTION      : %d\n",a -> prod_count);
 						break;
 					}
 					a = a -> link;
 				}
 				if(m_found != 1)
 				{
-					printf("MACHINE DOES NOT EXISTS IN PLANT\n");
+					printf("\n-----***** MACHINE DOES NOT EXISTS IN PLANT *****-----\n");
 					return 0;
 				}
 			}
@@ -180,7 +186,7 @@ int status()
 	}
 	else
 	{
-		printf("WRONG CHOICE\n");
+		printf("\n-----***** WRONG CHOICE *****-----\n");
 	}
 	return 0;
 }

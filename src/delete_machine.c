@@ -35,7 +35,7 @@ int delete_machine()
 	int found = 0;
 	int id;
 
-	printf("ENTER THE PLANT NAME : ");
+	printf("\nENTER THE PLANT NAME : ");
 	name = charvalidation();
 
 	q = p_start;

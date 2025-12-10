@@ -39,7 +39,7 @@ int create_plant()
 
 	while(1)
 	{
-		printf("\n-------------------------------\n");
+		printf("\n=================================\n");
 		printf("|SL.NO	| OPREATIONS		|\n");
 		printf("|-------|-----------------------|\n");
 		printf("|  1.	| ADD PLANT		|\n");
@@ -59,7 +59,7 @@ int create_plant()
 		printf("|  8.   | SEARCH                |\n");
 		printf("|-------|-----------------------|\n");
 		printf("|  9.	| EXIT			|\n");
-		printf("---------------------------------\n");
+		printf("=================================\n");
 
 		printf("\nCHOOSE ONE FROM THE ABOVE : ");
 		choice = intvalidation();

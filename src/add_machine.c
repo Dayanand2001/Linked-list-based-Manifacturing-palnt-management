@@ -130,7 +130,8 @@ int add_machine(char name)
 			p = p -> link;
 		p -> link = temp;
 	}
-	printf("DO YOU WANT TO ADD MORE MACHINE Y/N : ");
+	printf("\n-----***** MACHINE ADDED SUCCESSFULLY *****-----\n");
+	printf("\nDO YOU WANT TO ADD MORE MACHINE Y/N : ");
 	choice = charvalidation();
 
 	if(choice == 'Y' || choice == 'y')
